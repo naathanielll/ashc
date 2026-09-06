@@ -40,6 +40,7 @@ const irsResources = [
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>VITA Program Overview | Hunter College Accounting Society</title>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
   </head>
   <body class="bg-[#0e0716] text-neutral-100 min-h-screen font-sans antialiased selection:bg-[#FFC72A] selection:text-neutral-950">
 
@@ -76,24 +77,10 @@ const irsResources = [
         </div>
 
         <p class="text-neutral-300 text-sm leading-relaxed">
-          To receive announcements, interest meeting schedules, and onboarding packets, send an email to:
+          Please email <a href="mailto:huntercollegevita@gmail.com" class="text-[#FFC72A] font-semibold hover:underline">huntercollegevita@gmail.com</a>
         </p>
 
-        <div class="p-4 rounded-2xl bg-[#0e0716] border border-[#5F259F]/40 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
-          <div class="space-y-1">
-            <span class="text-xs text-neutral-400 font-medium">Official VITA Contact</span>
-            <div class="text-base font-bold text-[#FFC72A]">huntercollegevita@gmail.com</div>
-          </div>
-          <a 
-            href="mailto:huntercollegevita@gmail.com?subject=VITA%20Interest%202026"
-            class="px-5 py-2.5 rounded-xl bg-[#5F259F] hover:bg-[#722cbd] text-white text-xs font-bold transition text-center shrink-0"
-          >
-            Draft Interest Email
-          </a>
-        </div>
-
         <div class="space-y-2 pt-2">
-          <p class="text-xs font-semibold uppercase tracking-wider text-purple-200">Please format your email with the following details:</p>
           <ul class="space-y-2 text-sm text-neutral-300">
             <li class="flex items-start gap-2.5">
               <span class="text-[#FFC72A] font-bold">•</span>
@@ -101,11 +88,11 @@ const irsResources = [
             </li>
             <li class="flex items-start gap-2.5">
               <span class="text-[#FFC72A] font-bold">•</span>
-              <span><strong class="text-white">Full Name:</strong> Include your first and last name</span>
+              <span>Include your first and last name</span>
             </li>
             <li class="flex items-start gap-2.5">
               <span class="text-[#FFC72A] font-bold">•</span>
-              <span><strong class="text-white">Participation status:</strong> Specify if you are a <em>new VITA participant</em> or <em>returning VITA participant</em></span>
+              <span>Specify if you are a <em class="text-white">new VITA participant</em> or <em class="text-white">returning VITA participant</em></span>
             </li>
           </ul>
         </div>
@@ -114,48 +101,26 @@ const irsResources = [
       <!-- Section: Requirements to Become a Volunteer -->
       <section class="space-y-8">
         <div>
-          <h2 class="text-2xl font-bold text-white tracking-tight">Requirements to Become a Volunteer</h2>
+          <h2 class="text-2xl font-bold text-white tracking-tight">Requirements to become a volunteer</h2>
           <p class="text-sm text-neutral-300 mt-2">
-            All prospective volunteers must complete their testing through the IRS certification portal:
+            Pass exams on <a href="https://lms.linklearncertification.com/lms/signin" target="_blank" rel="noopener noreferrer" class="text-[#FFC72A] font-semibold hover:underline">https://lms.linklearncertification.com/lms/signin</a>
           </p>
-          <div class="mt-3">
-            <a 
-              href="https://lms.linklearncertification.com/lms/signin" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              class="inline-flex items-center gap-2 text-xs font-semibold text-[#FFC72A] hover:underline bg-[#190e2b] px-3.5 py-2 rounded-xl border border-[#5F259F]/40"
-            >
-              <span>Access IRS Link & Learn Portal (lms.linklearncertification.com)</span>
-              <span>↗</span>
-            </a>
-          </div>
         </div>
 
         <!-- Required Exams Breakdown -->
         <div class="p-6 rounded-2xl bg-[#190e2b]/50 border border-[#5F259F]/40 space-y-4">
-          <h3 class="text-base font-bold text-[#FFC72A] uppercase tracking-wider">Required Exams</h3>
+          <h3 class="text-base font-bold text-[#FFC72A] uppercase tracking-wider">For all Volunteers:</h3>
           
-          <div class="space-y-3">
-            <div class="p-4 rounded-xl bg-[#0e0716]/80 border border-purple-900/30">
-              <h4 class="font-bold text-white text-sm">For All Volunteers (Mandatory)</h4>
-              <ul class="list-disc list-inside text-sm text-neutral-300 mt-2 space-y-1">
-                <li>Volunteer Standards of Conduct Exam</li>
-                <li>Intake/Interview and Quality Review Exam</li>
-              </ul>
-            </div>
-
-            <div class="p-4 rounded-xl bg-[#0e0716]/80 border border-purple-900/30">
-              <h4 class="font-bold text-white text-sm">Preparer Track Exams (Role Dependent)</h4>
-              <ul class="list-disc list-inside text-sm text-neutral-300 mt-2 space-y-1">
-                <li><strong class="text-white">Basic Exam Certification:</strong> Required for Basic Preparers</li>
-                <li><strong class="text-white">Advanced Exam Certification:</strong> Required for Advanced Preparers, Officers, and Site Coordinators</li>
-                <li><strong class="text-white">Site Coordinator Exam Certification:</strong> Required for Site Coordinators</li>
-              </ul>
-            </div>
-          </div>
+          <ul class="list-disc list-inside text-sm text-neutral-300 space-y-2">
+            <li>Standard of Conduct</li>
+            <li>Intake/Quality Review</li>
+            <li>Basic Exam Certification (for Basic Preparers)</li>
+            <li>Advanced Exam Certification (for Advanced Preparers, Officers, and Site Coordinators)</li>
+            <li>Coordinator Exam Certification (for Site Coordinators)</li>
+          </ul>
 
           <!-- Minimum Score Callout -->
-          <div class="p-4 rounded-xl bg-amber-500/10 border border-[#FFC72A]/40 text-center">
+          <div class="p-4 rounded-xl bg-amber-500/10 border border-[#FFC72A]/40 text-center mt-6">
             <p class="text-sm text-neutral-200">
               <strong class="text-[#FFC72A] font-bold">MUST</strong> score a minimum of <strong class="text-[#FFC72A] font-bold">80%</strong> for all exams.
             </p>
@@ -163,22 +128,13 @@ const irsResources = [
         </div>
 
         <!-- Timeline & Training Notes -->
-        <div class="grid sm:grid-cols-2 gap-4">
-          <div class="p-5 rounded-2xl bg-[#190e2b]/40 border border-[#5F259F]/30 space-y-2">
-            <span class="text-xs text-[#FFC72A] font-semibold uppercase">Fall Semester</span>
-            <h4 class="font-bold text-white text-base">Interest Meeting</h4>
-            <p class="text-xs text-neutral-300 leading-relaxed">
-              There will be an official interest meeting for VITA held at the end of the fall semester to review timeline expectations and registration.
-            </p>
-          </div>
-
-          <div class="p-5 rounded-2xl bg-[#190e2b]/40 border border-[#5F259F]/30 space-y-2">
-            <span class="text-xs text-[#FFC72A] font-semibold uppercase">January Winter Intersession</span>
-            <h4 class="font-bold text-white text-base">Mandatory Software Training</h4>
-            <p class="text-xs text-neutral-300 leading-relaxed">
-              Mandatory lecture and software training sessions will be held in January for all candidates who have passed the required certification exams.
-            </p>
-          </div>
+        <div class="space-y-4 text-center py-4">
+          <p class="text-sm text-neutral-200 leading-relaxed">
+            Mandatory lecture and software training sessions will be held in January if you have passed the exams.
+          </p>
+          <p class="text-sm text-neutral-300 leading-relaxed">
+            There will be an interest meeting for VITA held at the end of the fall semester.
+          </p>
         </div>
       </section>
 
@@ -215,16 +171,10 @@ const irsResources = [
       </section>
 
       <!-- Questions Banner -->
-      <section class="p-6 rounded-2xl bg-[#190e2b]/60 border border-[#5F259F]/30 text-center space-y-3">
+      <section class="p-6 rounded-2xl bg-[#190e2b]/60 border border-[#5F259F]/30 text-center space-y-2">
         <p class="text-sm text-neutral-300">
-          If you have any further questions please email:
+          If you have any further questions please email <a href="mailto:huntercollegevita@gmail.com" class="text-[#FFC72A] font-bold hover:underline">huntercollegevita@gmail.com</a>
         </p>
-        <a 
-          href="mailto:huntercollegevita@gmail.com" 
-          class="inline-block text-base font-bold text-[#FFC72A] hover:underline"
-        >
-          huntercollegevita@gmail.com
-        </a>
       </section>
 
     </main>
