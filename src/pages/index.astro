@@ -18,13 +18,13 @@ const officers = [
   {
     name: "Jackie Lai",
     role: "President",
-    photo: "jackie.jpg",
+    photo: "/jackie.jpg",
     bio: "Manages club operations, leads general body meetings, and coordinates campus relations."
   },
   {
     name: "Blaze",
     role: "Vice President",
-    photo: "blaze.jpg",
+    photo: "/blaze.jpg",
     bio: "Oversees internal events, budgeting, and semester project workshops."
   }
 ];
@@ -45,10 +45,10 @@ const officers = [
         <!-- Brand / Crest -->
         <a href="/" class="flex items-center gap-3 group">
           <img 
-            src="logo.jps" 
+            src="/logo.jpg" 
             alt="Hunter Accounting Logo" 
             class="w-9 h-9 rounded-xl object-contain bg-[#190e2b] border border-[#5F259F] p-1"
-            onerror="this.style.display='none'"
+            onerror="this.src='/logo.png'; this.onerror=null;"
           />
           <div class="flex flex-col">
             <span class="font-bold text-white text-sm tracking-tight group-hover:text-[#FFC72A] transition">Accounting Society</span>
@@ -62,7 +62,7 @@ const officers = [
             Home
           </a>
 
-          <!-- VITA Dropdown -->
+          <!-- VITA Dropdown (Dedicated Routes) -->
           <div class="relative group py-2">
             <button class="flex items-center gap-1.5 px-3 py-1.5 rounded-lg hover:text-[#FFC72A] hover:bg-[#190e2b] transition">
               <span>VITA</span>
@@ -70,30 +70,30 @@ const officers = [
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
               </svg>
             </button>
-            <div class="absolute left-0 top-full pt-1 hidden group-hover:block w-56 z-50">
-              <div class="rounded-xl bg-[#190e2b] border border-[#5F259F]/50 shadow-2xl p-1.5 space-y-0.5">
-                <a href="/vita" class="block px-3 py-2 rounded-lg text-xs hover:bg-[#5F259F]/40 hover:text-white transition">
+            <div class="absolute left-0 top-full pt-1 hidden group-hover:block w-60 z-50">
+              <div class="rounded-xl bg-[#5F259F] border border-[#FFC72A]/40 shadow-2xl p-2 space-y-1">
+                <a href="/vita/program-overview" class="block px-3 py-2 rounded-lg text-xs font-semibold text-purple-100 hover:bg-[#190e2b] hover:text-[#FFC72A] transition">
                   Program Overview
                 </a>
-                <a href="/vita#volunteer" class="block px-3 py-2 rounded-lg text-xs hover:bg-[#5F259F]/40 hover:text-white transition">
+                <a href="/vita/eboard" class="block px-3 py-2 rounded-lg text-xs font-semibold text-purple-100 hover:bg-[#190e2b] hover:text-[#FFC72A] transition">
+                  VITA E-Board
+                </a>
+                <a href="/vita/volunteer" class="block px-3 py-2 rounded-lg text-xs font-semibold text-purple-100 hover:bg-[#190e2b] hover:text-[#FFC72A] transition">
                   Volunteer Opportunities
                 </a>
-                <a href="/vita#client-tax" class="block px-3 py-2 rounded-lg text-xs hover:bg-[#5F259F]/40 hover:text-white transition">
+                <a href="/vita/client-tax" class="block px-3 py-2 rounded-lg text-xs font-semibold text-purple-100 hover:bg-[#190e2b] hover:text-[#FFC72A] transition">
                   Tax Prep Appointments
-                </a>
-               <a href="/vita#client-tax" class="block px-3 py-2 rounded-lg text-xs hover:bg-[#5F259F]/40 hover:text-white transition">
-                  VITA E-Board
                 </a>
               </div>
             </div>
           </div>
 
-<!-- Events Link -->
-<a href="#announcements" class="px-3 py-2 rounded-lg hover:text-[#FFC72A] hover:bg-[#190e2b] transition">
-  Events
-</a>
+          <!-- Events Link -->
+          <a href="#announcements" class="px-3 py-2 rounded-lg hover:text-[#FFC72A] hover:bg-[#190e2b] transition">
+            Events
+          </a>
 
-          <!-- Education Dropdown (Hunter Purple Submenu) -->
+          <!-- Education Dropdown (Dedicated Routes) -->
           <div class="relative group py-2">
             <button class="flex items-center gap-1.5 px-3 py-1.5 rounded-lg hover:text-[#FFC72A] hover:bg-[#190e2b] transition">
               <span>Education</span>
@@ -154,7 +154,7 @@ const officers = [
         </p>
         <div class="flex flex-wrap gap-3 pt-2">
           <a 
-            href="https://forms.google.com" 
+            href="https://docs.google.com/forms/d/e/1FAIpQLSeUEKzWtcRuj5kBHhk-J9ckwZqmzKj_OCR24RObOFJT5PO_IQ/viewform" 
             target="_blank" 
             class="px-6 py-3 rounded-xl bg-[#FFC72A] text-neutral-950 font-bold hover:bg-[#e6b224] transition text-sm shadow-lg shadow-[#FFC72A]/10"
           >
