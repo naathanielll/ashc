@@ -19,80 +19,86 @@ const officers = [
   {
     name: "Jackie Lai",
     role: "President",
-    photo: "/jackie.jpg",
+    photo: "/officers/jackie-lai.jpg",
     linkedin: "https://www.linkedin.com/"
   },
   {
-    name: "Blaze",
+    name: "Jasmine Xiao",
     role: "Vice President",
-    photo: "/blaze.jpg",
+    photo: "/officers/jasmine-xiao.jpg",
     linkedin: "https://www.linkedin.com/"
   },
   {
-    name: "Officer Name",
-    role: "Treasurer",
-    photo: "/placeholder.jpg",
+    name: "Angelina Amsalen",
+    role: "VITA Manager",
+    photo: "/officers/angelina-amsalen.jpg",
     linkedin: "https://www.linkedin.com/"
   },
   {
-    name: "Officer Name",
+    name: "Brendan Leung",
+    role: "VITA Assistant Manager",
+    photo: "/officers/brendan-leung.jpg",
+    linkedin: "https://www.linkedin.com/"
+  },
+  {
+    name: "Junwei He",
+    role: "VITA Assistant Manager",
+    photo: "/officers/junwei-he.jpg",
+    linkedin: "https://www.linkedin.com/"
+  },
+  {
+    name: "Shiying Xu",
     role: "Secretary",
-    photo: "/placeholder.jpg",
+    photo: "/officers/shiying-xu.jpg",
     linkedin: "https://www.linkedin.com/"
   },
   {
-    name: "Officer Name",
-    role: "Director of Marketing",
-    photo: "/placeholder.jpg",
+    name: "Olivier Sikorski",
+    role: "Co-Treasurer",
+    photo: "/officers/olivier-sikorski.jpg",
     linkedin: "https://www.linkedin.com/"
   },
   {
-    name: "Officer Name",
-    role: "Director of Events",
-    photo: "/placeholder.jpg",
+    name: "Taharim Hossain",
+    role: "Co-Treasurer",
+    photo: "/officers/taharim-hossain.jpg",
     linkedin: "https://www.linkedin.com/"
   },
   {
-    name: "Officer Name",
-    role: "Director of Tech",
-    photo: "/placeholder.jpg",
+    name: "Michelle Jiang",
+    role: "External Committee",
+    photo: "/officers/michelle-jiang.jpg",
     linkedin: "https://www.linkedin.com/"
   },
   {
-    name: "Officer Name",
-    role: "Professional Development",
-    photo: "/placeholder.jpg",
+    name: "Bushra Rahman",
+    role: "Internal Committee",
+    photo: "/officers/bushra-rahman.jpg",
     linkedin: "https://www.linkedin.com/"
   },
   {
-    name: "Officer Name",
-    role: "VITA Site Lead",
-    photo: "/placeholder.jpg",
+    name: "Shanin Chowdhury",
+    role: "Social Media Officer",
+    photo: "/officers/shanin-chowdhury.jpg",
     linkedin: "https://www.linkedin.com/"
   },
   {
-    name: "Officer Name",
-    role: "Committee Chair",
-    photo: "/placeholder.jpg",
+    name: "Anita Zhao",
+    role: "Marketing Officer",
+    photo: "/officers/anita-zhao.jpg",
     linkedin: "https://www.linkedin.com/"
   },
   {
-    name: "Officer Name",
-    role: "Committee Chair",
-    photo: "/placeholder.jpg",
+    name: "Mariah Orzhekhovska",
+    role: "Intern",
+    photo: "/officers/mariah-orzhekhovska.jpg",
     linkedin: "https://www.linkedin.com/"
   },
   {
-    name: "Officer Name",
-    role: "Committee Chair",
-    photo: "/placeholder.jpg",
-    linkedin: "https://www.linkedin.com/"
-  },
-  {
-    name: "Officer Name",
-    role: "Committee Chair",
-    photo: "/placeholder.jpg",
-    linkedin: "https://www.linkedin.com/"
+    name: "Kevin Vu",
+    role: "Intern",
+    photo: "/officers/kevin-vu.jpg",
+    linkedin: ""
   }
 ];
 ---
@@ -206,7 +212,7 @@ const officers = [
       </div>
     </header>
 
-    <!-- Page Content Container -->
+    <!-- Main Content Container -->
     <main class="max-w-5xl mx-auto px-6 py-16 space-y-20">
       
       <!-- Club Hero Section -->
@@ -254,14 +260,14 @@ const officers = [
         </div>
       </section>
 
-      <!-- Executive Board Section (Compact 13-Officer Grid) -->
+      <!-- Executive Board Section (14 Members) -->
       <section id="officers" class="space-y-6">
         <div class="flex items-center justify-between border-b border-[#5F259F]/30 pb-3">
           <h2 class="text-2xl font-bold tracking-tight text-white">Executive Board</h2>
           <span class="text-xs text-neutral-400">2026 – 2027 Officers</span>
         </div>
 
-        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3.5">
+        <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3.5">
           {officers.map((officer) => (
             <div class="p-4 rounded-2xl bg-[#190e2b]/60 border border-[#5F259F]/30 hover:border-[#FFC72A]/50 transition flex flex-col items-center text-center relative group">
               
@@ -280,7 +286,7 @@ const officers = [
                 </a>
               )}
 
-              <!-- Compact Avatar -->
+              <!-- Officer Photo -->
               <img 
                 src={officer.photo} 
                 alt={officer.name} 
@@ -288,7 +294,7 @@ const officers = [
                 onerror="this.src='https://via.placeholder.com/150'"
               />
 
-              <!-- Name & Title -->
+              <!-- Name & Role -->
               <h3 class="font-bold text-sm text-white group-hover:text-[#FFC72A] transition leading-snug">
                 {officer.name}
               </h3>
