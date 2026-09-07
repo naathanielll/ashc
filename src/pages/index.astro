@@ -112,8 +112,8 @@ const officers = [
   </head>
   <body class="bg-[#0e0716] text-neutral-100 min-h-screen font-sans antialiased selection:bg-[#FFC72A] selection:text-neutral-950">
 
-    <!-- Sticky Header Navigation -->
-    <header class="sticky top-0 z-50 backdrop-blur-md bg-[#0e0716]/90 border-b border-[#5F259F]/30">
+    <!-- Sticky Header Navigation with Mobile Support -->
+    <header class="sticky top-0 z-50 backdrop-blur-md bg-[#0e0716]/95 border-b border-[#5F259F]/30">
       <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
         
         <!-- Brand / Crest -->
@@ -162,7 +162,6 @@ const officers = [
             </div>
           </div>
 
-          <!-- Events Link -->
           <a href="#announcements" class="px-3 py-2 rounded-lg hover:text-[#FFC72A] hover:bg-[#190e2b] transition">
             Events
           </a>
@@ -201,14 +200,85 @@ const officers = [
           </a>
         </nav>
 
-        <!-- Header Action Button -->
-        <a 
-          href="https://docs.google.com/forms/d/e/1FAIpQLSeUEKzWtcRuj5kBHhk-J9ckwZqmzKj_OCR24RObOFJT5PO_IQ/viewform" 
-          target="_blank" 
-          class="px-4 py-2 text-xs font-bold rounded-xl bg-[#FFC72A] text-neutral-950 hover:bg-[#e6b224] transition shadow-md shadow-[#FFC72A]/10"
-        >
-          Join Society
-        </a>
+        <!-- Header Actions (Join Button + Mobile Hamburger) -->
+        <div class="flex items-center gap-2.5">
+          <a 
+            href="https://docs.google.com/forms/d/e/1FAIpQLSeUEKzWtcRuj5kBHhk-J9ckwZqmzKj_OCR24RObOFJT5PO_IQ/viewform" 
+            target="_blank" 
+            class="px-3 sm:px-4 py-2 text-xs font-bold rounded-xl bg-[#FFC72A] text-neutral-950 hover:bg-[#e6b224] transition shadow-md shadow-[#FFC72A]/10"
+          >
+            Join Society
+          </a>
+
+          <!-- Mobile Menu Toggle Button -->
+          <button 
+            id="mobile-menu-btn" 
+            class="lg:hidden p-2 rounded-xl text-neutral-300 hover:text-[#FFC72A] hover:bg-[#190e2b] border border-[#5F259F]/40 transition" 
+            aria-label="Toggle navigation menu"
+          >
+            <svg id="menu-icon-open" class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+            <svg id="menu-icon-close" class="w-5 h-5 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- Mobile Collapsible Navigation Drawer -->
+      <div id="mobile-menu" class="hidden lg:hidden border-t border-[#5F259F]/30 bg-[#0e0716] px-6 py-4 space-y-4 max-h-[80vh] overflow-y-auto">
+        <div class="space-y-1">
+          <a href="/" class="mobile-nav-link block px-3 py-2 rounded-lg text-sm font-medium hover:bg-[#190e2b] hover:text-[#FFC72A] transition">
+            Home
+          </a>
+          <a href="#announcements" class="mobile-nav-link block px-3 py-2 rounded-lg text-sm font-medium hover:bg-[#190e2b] hover:text-[#FFC72A] transition">
+            Events
+          </a>
+        </div>
+
+        <!-- Mobile VITA Links -->
+        <div class="space-y-1 pt-2 border-t border-[#5F259F]/20">
+          <span class="px-3 text-[11px] font-bold uppercase tracking-wider text-[#FFC72A]">VITA Program</span>
+          <a href="/vita/program-overview" class="block px-3 py-1.5 rounded-lg text-xs text-neutral-300 hover:bg-[#190e2b] hover:text-white transition">
+            • Program Overview
+          </a>
+          <a href="/vita/eboard" class="block px-3 py-1.5 rounded-lg text-xs text-neutral-300 hover:bg-[#190e2b] hover:text-white transition">
+            • VITA E-Board
+          </a>
+          <a href="/vita/volunteer" class="block px-3 py-1.5 rounded-lg text-xs text-neutral-300 hover:bg-[#190e2b] hover:text-white transition">
+            • Volunteer Opportunities
+          </a>
+          <a href="/vita/client-tax" class="block px-3 py-1.5 rounded-lg text-xs text-neutral-300 hover:bg-[#190e2b] hover:text-white transition">
+            • Tax Prep Appointments
+          </a>
+        </div>
+
+        <!-- Mobile Education Links -->
+        <div class="space-y-1 pt-2 border-t border-[#5F259F]/20">
+          <span class="px-3 text-[11px] font-bold uppercase tracking-wider text-[#FFC72A]">Education</span>
+          <a href="/education/cpa-requirements" class="block px-3 py-1.5 rounded-lg text-xs text-neutral-300 hover:bg-[#190e2b] hover:text-white transition">
+            • CPA Requirements
+          </a>
+          <a href="/education/major-requirements" class="block px-3 py-1.5 rounded-lg text-xs text-neutral-300 hover:bg-[#190e2b] hover:text-white transition">
+            • Major Requirements
+          </a>
+          <a href="/education/masters" class="block px-3 py-1.5 rounded-lg text-xs text-neutral-300 hover:bg-[#190e2b] hover:text-white transition">
+            • Masters In Accounting
+          </a>
+          <a href="/education/faculty" class="block px-3 py-1.5 rounded-lg text-xs text-neutral-300 hover:bg-[#190e2b] hover:text-white transition">
+            • Advisor + Faculty
+          </a>
+        </div>
+
+        <div class="space-y-1 pt-2 border-t border-[#5F259F]/20">
+          <a href="#resources" class="mobile-nav-link block px-3 py-2 rounded-lg text-sm font-medium hover:bg-[#190e2b] hover:text-[#FFC72A] transition">
+            Useful Links
+          </a>
+          <a href="#contact" class="mobile-nav-link block px-3 py-2 rounded-lg text-sm font-medium hover:bg-[#190e2b] hover:text-[#FFC72A] transition">
+            Contact us
+          </a>
+        </div>
       </div>
     </header>
 
@@ -351,5 +421,28 @@ const officers = [
       <p>© {new Date().getFullYear()} Hunter College Accounting Society. All rights reserved.</p>
     </footer>
 
+    <!-- Client-side Script to Toggle Mobile Menu -->
+    <script>
+      const btn = document.getElementById('mobile-menu-btn');
+      const menu = document.getElementById('mobile-menu');
+      const iconOpen = document.getElementById('menu-icon-open');
+      const iconClose = document.getElementById('menu-icon-close');
+      const mobileLinks = document.querySelectorAll('.mobile-nav-link');
+
+      btn?.addEventListener('click', () => {
+        menu?.classList.toggle('hidden');
+        iconOpen?.classList.toggle('hidden');
+        iconClose?.classList.toggle('hidden');
+      });
+
+      // Automatically close menu when an in-page anchor is tapped
+      mobileLinks.forEach((link) => {
+        link.addEventListener('click', () => {
+          menu?.classList.add('hidden');
+          iconOpen?.classList.remove('hidden');
+          iconClose?.classList.add('hidden');
+        });
+      });
+    </script>
   </body>
 </html>
