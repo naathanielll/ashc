@@ -1,0 +1,52 @@
+{
+  "undergradAdvisor": {
+    "title": "Undergraduate Accounting Advisor",
+    "advisorName": "Professor Joseph Downey",
+    "email": "accugrad@hunter.cuny.edu",
+    "navigateUrl": "https://www.hunter.cuny.edu/navigate/students/",
+    "degreeWorksUrl": "https://degreeworks.cuny.edu/",
+    "instructions": [
+      "Please include your Hunter ID # in the subject line of all emails.",
+      "Please state the reason you need help from an advisor; include a screenshot of any error messages to help explain your issue.",
+      "Advising emails are answered by Professor Joseph Downey.",
+      "For discussing class options, please see requirements in DegreeWorks before making an appointment or emailing."
+    ]
+  },
+  "otherAdvising": {
+    "graduateAdvisor": {
+      "title": "Graduate Accounting Advisor",
+      "name": "Professor Yuan (Judy) Yin",
+      "email": "yy369@hunter.cuny.edu"
+    },
+    "careerDevelopment": {
+      "title": "Career Development Advising",
+      "office": "Career Development Services Office (CDS)",
+      "url": "https://www.hunter.cuny.edu/students/career-center/students/"
+    },
+    "generalEducation": {
+      "title": "General Education Requirements Advising",
+      "url": "https://www.hunter.cuny.edu/navigate/students/"
+    }
+  },
+  "faculty": [
+    { "name": "Andrea Luciani", "emails": ["andrea.luciani@hunter.cuny.edu"] },
+    { "name": "Bridget Trusty", "emails": ["bridget.barnett21@login.cuny.edu"] },
+    { "name": "Cassandra Wu", "emails": ["cwu0008@hunter.cuny.edu"] },
+    { "name": "Charles Rossi", "emails": ["charles.rossi@hunter.cuny.edu"] },
+    { "name": "Enxhi Cuni", "emails": ["ENXHI.CUNI07@login.cuny.edu"] },
+    { "name": "Eva Yan", "emails": ["yifan.yan@hunter.cuny.edu"] },
+    { "name": "Jasmine Singh", "emails": ["JASMINE.BELANGER54@login.cuny.edu"] },
+    { "name": "John Li", "emails": ["jli0046@hunter.cuny.edu"] },
+    { "name": "Joseph Chan", "emails": ["joseph.chan16@login.cuny.edu"] },
+    { "name": "Joseph Downey", "emails": ["jd5906@hunter.cuny.edu"] },
+    { "name": "Kevin Sachs", "emails": ["kevin.sachs@hunter.cuny.edu", "ks617@hunter.cuny.edu"] },
+    { "name": "Michelle Liu", "emails": ["ml2997@hunter.cuny.edu"] },
+    { "name": "Natasha Kosnac", "emails": ["Natasha.Kosnac@hunter.cuny.edu"] },
+    { "name": "Phyllis Eisenberg", "emails": ["phyllis.eisenberg@hunter.cuny.edu", "pe272@hunter.cuny.edu"] },
+    { "name": "Samantha Weston", "emails": ["samantha.weston@hunter.cuny.edu"] },
+    { "name": "Vivette Ancona", "emails": ["vivette.ancona@hunter.cuny.edu"] },
+    { "name": "Wei Yu", "emails": ["wy109@hunter.cuny.edu"] },
+    { "name": "Yao Yao", "emails": ["yao.yao60@login.cuny.edu"] },
+    { "name": "Yuan Yin", "emails": ["yuan.yin@hunter.cuny.edu"] }
+  ]
+}
