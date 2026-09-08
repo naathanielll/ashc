@@ -1,0 +1,65 @@
+
+{
+  "degreeTitle": "ACCOUNTING UNDERGRADUATE DEGREE",
+  "degreeType": "BS - BACHELOR OF SCIENCE",
+  "curriculum": "Current Curriculum (60-73)",
+  "mathSequence": {
+    "atLeast3Credits": [
+      {
+        "course": "MATH 15000 - Calculus I (4 cr)",
+        "subOption": "AND MATH 15200 - Calculus for the Life and Social Science (4 cr)"
+      }
+    ],
+    "atLeast9Credits": [
+      {
+        "primary": "MATH 10100 - Algebra for College Students (3 cr)",
+        "alternate": "MATH 101EN - Algebra College Stud-Enhanced (3 cr)"
+      },
+      {
+        "primary": "MATH 10500 - Math for Elementary Education 2 (3 cr)"
+      },
+      {
+        "primary": "MATH 12400 - College Algebra and Trigonometry (4 cr)",
+        "alternates": [
+          "MATH 12500 - Precalculus (4 cr)",
+          "MATH 12550 - Precalculus with Workshop (4 cr)"
+        ]
+      },
+      {
+        "primary": "MATH 14000 - Mathematical Reasoning Workshop (1 cr)"
+      }
+    ],
+    "placementNote": "Students may place out of any of the classes listed above and MATH 15000 (STEM)/MATH 15200 (STEM) without replacing the credits.",
+    "preferredNote": "MATH 15000 (STEM) is preferred for students who will take additional MATH courses."
+  },
+  "professionalStudies": [
+    { "code": "ACC 10100", "title": "Accounting: The Language of Business", "credits": "3 cr" },
+    { "code": "ACC 27100", "title": "Accounting 1", "credits": "3 cr" },
+    { "code": "ACC 27200", "title": "Accounting II", "credits": "3 cr" },
+    { "code": "ACCP 37100", "title": "Intermediate Accounting I", "credits": "3 cr" },
+    { "code": "ACCP 37200", "title": "Intermediate Accounting 2", "credits": "4 cr" },
+    { "code": "ACCP 37300", "title": "Federal Income Taxation", "credits": "3 cr" },
+    { "code": "ACCP 37400", "title": "Managerial Accounting (Cost Accounting)", "credits": "3 cr" },
+    { "code": "ACCP 47000", "title": "Advanced Accounting", "credits": "4 cr" },
+    { "code": "ACCP 47500", "title": "Auditing", "credits": "4 cr" }
+  ],
+  "repeatPolicy": {
+    "rule": "Students who receive a grade of “D” or lower in any of the nine required Accounting courses in the Professional Studies Requirement will be allowed to repeat the course only once. In total, students may repeat no more than three Accounting courses for which they received a grade of “D” or lower. Students who exceed this allowed number of course repeats will be dismissed from the B.S. program in Accounting.",
+    "exception": "The Academic Advisor for the B.S. program in Accounting may, under extraordinary circumstances, make exceptions to this rule."
+  },
+  "otherProfessional": [
+    { "code": "ACC 28000", "title": "Business Law I", "credits": "3 cr" },
+    { "code": "ECO 10000", "title": "Introduction to Economics", "credits": "3 cr" },
+    { "code": "ECO 20000", "title": "Principles of Microeconomics", "credits": "3 cr" },
+    { "code": "ECO 20100", "title": "Principles of Macroeconomics", "credits": "3 cr" },
+    { "code": "ECO 36500", "title": "Corporate Finance", "credits": "3 cr" },
+    { "code": "ACCP 36700", "title": "Analysis of Financial Statements", "credits": "3 cr" },
+    { "code": "ACCP 47600", "title": "Computer Accounting Systems", "credits": "3 cr" },
+    { "code": "ECO 22100 or STAT 21300", "title": "Economic Statistics OR Intro to Applied Statistics", "credits": "3 cr" }
+  ],
+  "catalogUrl": "https://hunter-undergraduate.catalog.cuny.edu/programs/ACCP-BS",
+  "advisor": {
+    "name": "Joseph Downey",
+    "email": "accugrad@hunter.cuny.edu"
+  }
+}
