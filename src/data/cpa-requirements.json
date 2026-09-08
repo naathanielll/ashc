@@ -1,0 +1,28 @@
+{
+  "badge": "New York State Licensure",
+  "title": "CPA Exam & Licensure Requirements",
+  "description": "An overview of the 120-credit exam sit requirements and the 150-credit licensure pathway in New York.",
+  "sections": [
+    {
+      "title": "To Sit for the Uniform CPA Exam (120 Credits)",
+      "credits": "120 Credits",
+      "requirements": [
+        "120 semester hours of college-level education.",
+        "Financial Accounting & Reporting coursework (upper-level).",
+        "Cost / Managerial Accounting.",
+        "Taxation course coverage.",
+        "Audit and Attestation course."
+      ]
+    },
+    {
+      "title": "For Full Licensure (150 Credits)",
+      "credits": "150 Credits",
+      "requirements": [
+        "Completion of 150 total semester hours.",
+        "33 semester hours in accounting courses.",
+        "36 semester hours in general business electives.",
+        "One year of acceptable full-time accounting experience verified by an active CPA."
+      ]
+    }
+  ]
+}
