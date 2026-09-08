@@ -1,28 +1,7 @@
 ---
 // src/pages/education/faculty.astro
 import '../../styles/global.css';
-
-const faculty = [
-  { name: "Andrea Luciani", emails: ["andrea.luciani@hunter.cuny.edu"] },
-  { name: "Bridget Trusty", emails: ["bridget.barnett21@login.cuny.edu"] },
-  { name: "Cassandra Wu", emails: ["cwu0008@hunter.cuny.edu"] },
-  { name: "Charles Rossi", emails: ["charles.rossi@hunter.cuny.edu"] },
-  { name: "Enxhi Cuni", emails: ["ENXHI.CUNI07@login.cuny.edu"] },
-  { name: "Eva Yan", emails: ["yifan.yan@hunter.cuny.edu"] },
-  { name: "Jasmine Singh", emails: ["JASMINE.BELANGER54@login.cuny.edu"] },
-  { name: "John Li", emails: ["jli0046@hunter.cuny.edu"] },
-  { name: "Joseph Chan", emails: ["joseph.chan16@login.cuny.edu"] },
-  { name: "Joseph Downey", emails: ["jd5906@hunter.cuny.edu"] },
-  { name: "Kevin Sachs", emails: ["kevin.sachs@hunter.cuny.edu", "ks617@hunter.cuny.edu"] },
-  { name: "Michelle Liu", emails: ["ml2997@hunter.cuny.edu"] },
-  { name: "Natasha Kosnac", emails: ["Natasha.Kosnac@hunter.cuny.edu"] },
-  { name: "Phyllis Eisenberg", emails: ["phyllis.eisenberg@hunter.cuny.edu", "pe272@hunter.cuny.edu"] },
-  { name: "Samantha Weston", emails: ["samantha.weston@hunter.cuny.edu"] },
-  { name: "Vivette Ancona", emails: ["vivette.ancona@hunter.cuny.edu"] },
-  { name: "Wei Yu", emails: ["wy109@hunter.cuny.edu"] },
-  { name: "Yao Yao", emails: ["yao.yao60@login.cuny.edu"] },
-  { name: "Yuan Yin", emails: ["yuan.yin@hunter.cuny.edu"] }
-];
+import advisingData from '../../data/faculty.json';
 ---
 
 <html lang="en" class="scroll-smooth">
@@ -77,7 +56,7 @@ const faculty = [
         <!-- Advising Details -->
         <div class="md:col-span-8 space-y-6">
           <h2 class="text-2xl font-bold text-[#c084fc] underline underline-offset-4">
-            Undergraduate Accounting Advisor
+            {advisingData.undergradAdvisor.title}
           </h2>
           <p class="text-sm font-semibold text-white">
             There are two options for advising:
@@ -88,7 +67,7 @@ const faculty = [
             <div class="space-y-1">
               <p class="font-bold text-[#FFC72A]">• By Navigate Appointment:</p>
               <p class="pl-4">
-                Visit <a href="https://www.hunter.cuny.edu/navigate/students/" target="_blank" rel="noopener noreferrer" class="text-white font-semibold underline hover:text-[#FFC72A] transition">Navigate</a> to see availability and schedule an appointment.
+                Visit <a href={advisingData.undergradAdvisor.navigateUrl} target="_blank" rel="noopener noreferrer" class="text-white font-semibold underline hover:text-[#FFC72A] transition">Navigate</a> to see availability and schedule an appointment.
               </p>
             </div>
 
@@ -99,14 +78,18 @@ const faculty = [
               <ul class="list-disc list-inside pl-6 space-y-1.5 text-xs sm:text-sm text-neutral-300">
                 <li>
                   Email correspondence should be sent to: 
-                  <a href="mailto:accugrad@hunter.cuny.edu" class="text-[#FFC72A] underline font-medium ml-1">accugrad@hunter.cuny.edu</a>
+                  <a href={`mailto:${advisingData.undergradAdvisor.email}`} class="text-[#FFC72A] underline font-medium ml-1">
+                    {advisingData.undergradAdvisor.email}
+                  </a>
                 </li>
                 <li>Please include your <strong>Hunter ID #</strong> in the subject line of all emails.</li>
                 <li>Please state the reason you need help from an advisor; include a screenshot of any error messages to help explain your issue.</li>
-                <li>Advising emails are answered by <strong>Professor Joseph Downey</strong>.</li>
+                <li>Advising emails are answered by <strong>{advisingData.undergradAdvisor.advisorName}</strong>.</li>
                 <li>
                   For discussing class options, please see requirements in 
-                  <a href="https://degreeworks.cuny.edu/" target="_blank" rel="noopener noreferrer" class="text-white underline hover:text-[#FFC72A]">DegreeWorks</a> 
+                  <a href={advisingData.undergradAdvisor.degreeWorksUrl} target="_blank" rel="noopener noreferrer" class="text-white underline hover:text-[#FFC72A]">
+                    DegreeWorks
+                  </a> 
                   before making an appointment or emailing.
                 </li>
               </ul>
@@ -129,7 +112,7 @@ const faculty = [
           </div>
 
           <div class="divide-y divide-[#5F259F]/20 text-xs sm:text-sm">
-            {faculty.map((member) => (
+            {advisingData.faculty.map((member) => (
               <div class="py-2.5 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-1">
                 <span class="font-semibold text-white">{member.name}:</span>
                 <div class="flex flex-wrap gap-1 text-xs">
@@ -153,12 +136,12 @@ const faculty = [
           <!-- Graduate Accounting Advisor -->
           <section class="p-6 rounded-2xl bg-[#190e2b]/60 border border-[#5F259F]/40 shadow-lg space-y-3">
             <h3 class="text-lg font-bold text-[#c084fc] underline underline-offset-4">
-              Graduate Accounting Advisor
+              {advisingData.otherAdvising.graduateAdvisor.title}
             </h3>
             <p class="text-xs sm:text-sm text-neutral-300 leading-relaxed">
-              Advising is done by contacting <strong>Professor Yuan (Judy) Yin</strong> at 
-              <a href="mailto:yy369@hunter.cuny.edu" class="text-[#FFC72A] font-semibold underline hover:text-[#ffe07b] ml-1">
-                yy369@hunter.cuny.edu
+              Advising is done by contacting <strong>{advisingData.otherAdvising.graduateAdvisor.name}</strong> at 
+              <a href={`mailto:${advisingData.otherAdvising.graduateAdvisor.email}`} class="text-[#FFC72A] font-semibold underline hover:text-[#ffe07b] ml-1">
+                {advisingData.otherAdvising.graduateAdvisor.email}
               </a>
             </p>
           </section>
@@ -166,17 +149,17 @@ const faculty = [
           <!-- Career Development Advising -->
           <section class="p-6 rounded-2xl bg-[#190e2b]/60 border border-[#5F259F]/40 shadow-lg space-y-3">
             <h3 class="text-lg font-bold text-[#c084fc] underline underline-offset-4">
-              Career Development Advising
+              {advisingData.otherAdvising.careerDevelopment.title}
             </h3>
             <p class="text-xs sm:text-sm text-neutral-300 leading-relaxed">
-              Contact the  
-               <a 
-                href="https://www.hunter.cuny.edu/students/career-center/students/" 
+              Contact the 
+              <a 
+                href={advisingData.otherAdvising.careerDevelopment.url} 
                 target="_blank" 
                 rel="noopener noreferrer" 
                 class="text-[#FFC72A] font-semibold underline hover:text-[#ffe07b]"
               >
-                Career Development Services Office (CDS)
+                {advisingData.otherAdvising.careerDevelopment.office}
               </a> 
               to make an appointment.
             </p>
@@ -185,12 +168,12 @@ const faculty = [
           <!-- General Education Requirements Advising -->
           <section class="p-6 rounded-2xl bg-[#190e2b]/60 border border-[#5F259F]/40 shadow-lg space-y-3">
             <h3 class="text-lg font-bold text-[#c084fc] underline underline-offset-4">
-              General Education Requirements Advising
+              {advisingData.otherAdvising.generalEducation.title}
             </h3>
             <p class="text-xs sm:text-sm text-neutral-300 leading-relaxed">
               Make an appointment with your assigned advisor through the following 
-               <a 
-                href="https://www.hunter.cuny.edu/navigate/students/" 
+              <a 
+                href={advisingData.otherAdvising.generalEducation.url} 
                 target="_blank" 
                 rel="noopener noreferrer" 
                 class="text-[#FFC72A] font-semibold underline hover:text-[#ffe07b]"
