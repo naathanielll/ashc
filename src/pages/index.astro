@@ -1,100 +1,8 @@
 ---
 // src/pages/index.astro
 import '../styles/global.css';
-
-const announcements = [
-  {
-    date: "Upcoming • Sep 9",
-    title: "Club Fair",
-    details: "Learn more about ASHC!"
-  },
-  {
-    date: "Upcoming • Sep 23",
-    title: "Executive Board Meet & Greet",
-    details: "Come and meet your fellow E-board members! Feel free to network with all your peers too."
-  }
-];
-
-const officers = [
-  {
-    name: "Jackie Lai",
-    role: "President",
-    photo: "/officers/jackie.jpg",
-    linkedin: "https://www.linkedin.com/in/yanroajackielai/"
-  },
-  {
-    name: "Jasmine Xiao",
-    role: "Vice President",
-    photo: "/officers/jasmine.png",
-    linkedin: "https://www.linkedin.com/in/jxiao25/"
-  },
-  {
-    name: "Angelina Amsalen",
-    role: "VITA Manager",
-    photo: "/officers/angelina.png",
-    linkedin: "https://www.linkedin.com/in/angelina-amsalen/"
-  },
-  {
-    name: "Brendan Leung",
-    role: "VITA Assistant Manager",
-    photo: "/officers/brendan.png",
-    linkedin: "https://www.linkedin.com/in/brendan-leung-a2696523b/"
-  },
-  {
-    name: "Junwei He",
-    role: "VITA Assistant Manager",
-    photo: "/officers/jun.png",
-    linkedin: "https://www.linkedin.com/in/junwei-he2152/"
-  },
-  {
-    name: "Shiying Xu",
-    role: "Secretary",
-    photo: "/officers/shiying.png",
-    linkedin: "https://www.linkedin.com/in/shiying-xu-213429392/"
-  },
-  {
-    name: "Olivier Sikorski",
-    role: "Co-Treasurer",
-    photo: "/officers/olivier.png",
-    linkedin: "https://www.linkedin.com/in/olivier-sikorski/"
-  },
-  {
-    name: "Taharim Hossain",
-    role: "Co-Treasurer",
-    photo: "/officers/taharim.png",
-    linkedin: "https://www.linkedin.com/in/taharim-hossain-b22262372/"
-  },
-  {
-    name: "Michelle Jiang",
-    role: "External Committee",
-    photo: "/officers/michelle.png",
-    linkedin: "https://www.linkedin.com/in/michelle-jiang-1117-accounting/"
-  },
-  {
-    name: "Bushra Rahman",
-    role: "Internal Committee",
-    photo: "/officers/bushra.png",
-    linkedin: "https://www.linkedin.com/in/bushra-rahman-macaulay/"
-  },
-  {
-    name: "Anita Zhao",
-    role: "Marketing Officer",
-    photo: "/officers/anita.png",
-    linkedin: "https://www.linkedin.com/in/anita-zhao-352a7a286/"
-  },
-  {
-    name: "Mariah Orzhekhovska",
-    role: "Social Media Officer",
-    photo: "/officers/mariah.png",
-    linkedin: "https://www.linkedin.com/in/mariah-orzhekhovska/"
-  },
-  {
-    name: "Kevin Vu",
-    role: "Intern",
-    photo: "/officers/kevin.png",
-    linkedin: ""
-  }
-];
+import announcements from '../data/announcements.json';
+import officers from '../data/officers.json';
 ---
 
 <html lang="en" class="scroll-smooth">
@@ -202,7 +110,6 @@ const officers = [
             Join Society
           </a>
 
-          <!-- Mobile Menu Toggle Button -->
           <button 
             id="mobile-menu-btn" 
             class="lg:hidden p-2 rounded-xl text-neutral-300 hover:text-[#FFC72A] hover:bg-[#190e2b] border border-[#5F259F]/40 transition" 
@@ -319,7 +226,7 @@ const officers = [
         </div>
       </section>
 
-      <!-- Executive Board Section (14 Members) -->
+      <!-- Executive Board Section (Imported from JSON) -->
       <section id="officers" class="space-y-6">
         <div class="flex items-center justify-between border-b border-[#5F259F]/30 pb-3">
           <h2 class="text-2xl font-bold tracking-tight text-white">Executive Board</h2>
@@ -424,7 +331,6 @@ const officers = [
         iconClose?.classList.toggle('hidden');
       });
 
-      // Automatically close menu when an in-page anchor is tapped
       mobileLinks.forEach((link) => {
         link.addEventListener('click', () => {
           menu?.classList.add('hidden');
