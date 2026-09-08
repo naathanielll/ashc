@@ -1,0 +1,50 @@
+[
+  {
+    "name": "Angelina Amsalen",
+    "role": "VITA Manager",
+    "photo": "/officers/angelina.png",
+    "linkedin": "https://www.linkedin.com/in/angelina-amsalen/"
+  },
+  {
+    "name": "Brendan Leung",
+    "role": "VITA Assistant Manager",
+    "photo": "/officers/brendan.png",
+    "linkedin": "https://www.linkedin.com/in/brendan-leung-a2696523b/"
+  },
+  {
+    "name": "Junwei He",
+    "role": "VITA Assistant Manager",
+    "photo": "/officers/jun.png",
+    "linkedin": "https://www.linkedin.com/in/junwei-he2152/"
+  },
+  {
+    "name": "Officer Name",
+    "role": "Site Coordinator",
+    "photo": "/officers/placeholder.jpg",
+    "linkedin": "https://www.linkedin.com/"
+  },
+  {
+    "name": "Officer Name",
+    "role": "Site Coordinator",
+    "photo": "/officers/placeholder.jpg",
+    "linkedin": "https://www.linkedin.com/"
+  },
+  {
+    "name": "Officer Name",
+    "role": "Site Coordinator",
+    "photo": "/officers/placeholder.jpg",
+    "linkedin": "https://www.linkedin.com/"
+  },
+  {
+    "name": "Officer Name",
+    "role": "Site Coordinator",
+    "photo": "/officers/placeholder.jpg",
+    "linkedin": "https://www.linkedin.com/"
+  },
+  {
+    "name": "Officer Name",
+    "role": "Site Coordinator",
+    "photo": "/officers/placeholder.jpg",
+    "linkedin": "https://www.linkedin.com/"
+  }
+]
