@@ -1,0 +1,50 @@
+{
+  "volunteerAnnouncement": "Applications to become a volunteer open up at the end of the fall semester",
+  "contactEmail": "huntercollegevita@gmail.com",
+  "interestSubjectLine": "VITA Interest 2026",
+  "certificationPortalUrl": "https://lms.linklearncertification.com/lms/signin",
+  "requiredExams": [
+    "Standard of Conduct",
+    "Intake/Quality Review",
+    "Basic Exam Certification (for Basic Preparers)",
+    "Advanced Exam Certification (for Advanced Preparers, Officers, and Site Coordinators)",
+    "Coordinator Exam Certification (for Site Coordinators)"
+  ],
+  "passingScore": "80%",
+  "timelineNotes": [
+    "Mandatory lecture and software training sessions will be held in January if you have passed the exams.",
+    "There will be an interest meeting for VITA held at the end of the fall semester."
+  ],
+  "irsResources": [
+    {
+      "title": "Link & Learn Taxes Certification Portal",
+      "code": "VITA / TCE LMS",
+      "desc": "The official testing portal where volunteers create an account and complete all required certification exams.",
+      "url": "https://lms.linklearncertification.com/lms/signin"
+    },
+    {
+      "title": "VITA/TCE Volunteer Resource Guide",
+      "code": "IRS Publication 4012",
+      "desc": "The primary reference manual used by volunteers during tax preparation to check filing thresholds, dependents, and deductions.",
+      "url": "https://www.irs.gov/pub/irs-pdf/p4012.pdf"
+    },
+    {
+      "title": "VITA/TCE Training Guide",
+      "code": "IRS Publication 4491",
+      "desc": "Comprehensive training manual covering basic, advanced, and specialty tax law concepts.",
+      "url": "https://www.irs.gov/pub/irs-pdf/p4491.pdf"
+    },
+    {
+      "title": "Volunteer Standards of Conduct Training",
+      "code": "IRS Publication 4961",
+      "desc": "Mandatory ethics course and guidelines for taxpayer confidentiality and conflict of interest.",
+      "url": "https://www.irs.gov/pub/irs-pdf/p4961.pdf"
+    },
+    {
+      "title": "Intake/Interview & Quality Review Training",
+      "code": "IRS Publication 5101",
+      "desc": "Procedures for taxpayer intake, verifying government IDs, and conducting second-party reviews.",
+      "url": "https://www.irs.gov/pub/irs-pdf/p5101.pdf"
+    }
+  ]
+}
