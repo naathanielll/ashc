@@ -1,29 +1,7 @@
 ---
 // src/pages/education/major-requirements.astro
 import '../../styles/global.css';
-
-const professionalStudies = [
-  { code: "ACC 10100", title: "Accounting: The Language of Business", credits: "3 cr" },
-  { code: "ACC 27100", title: "Accounting 1", credits: "3 cr" },
-  { code: "ACC 27200", title: "Accounting II", credits: "3 cr" },
-  { code: "ACCP 37100", title: "Intermediate Accounting I", credits: "3 cr" },
-  { code: "ACCP 37200", title: "Intermediate Accounting 2", credits: "4 cr" },
-  { code: "ACCP 37300", title: "Federal Income Taxation", credits: "3 cr" },
-  { code: "ACCP 37400", title: "Managerial Accounting (Cost Accounting)", credits: "3 cr" },
-  { code: "ACCP 47000", title: "Advanced Accounting", credits: "4 cr" },
-  { code: "ACCP 47500", title: "Auditing", credits: "4 cr" }
-];
-
-const otherProfessional = [
-  { code: "ACC 28000", title: "Business Law I", credits: "3 cr" },
-  { code: "ECO 10000", title: "Introduction to Economics", credits: "3 cr" },
-  { code: "ECO 20000", title: "Principles of Microeconomics", credits: "3 cr" },
-  { code: "ECO 20100", title: "Principles of Macroeconomics", credits: "3 cr" },
-  { code: "ECO 36500", title: "Corporate Finance", credits: "3 cr" },
-  { code: "ACCP 36700", title: "Analysis of Financial Statements", credits: "3 cr" },
-  { code: "ACCP 47600", title: "Computer Accounting Systems", credits: "3 cr" },
-  { code: "ECO 22100 or STAT 21300", title: "Economic Statistics OR Intro to Applied Statistics", credits: "3 cr" }
-];
+import reqs from '../../data/major-requirements.json';
 ---
 
 <html lang="en" class="scroll-smooth">
@@ -65,13 +43,13 @@ const otherProfessional = [
         <!-- Degree Header Titles -->
         <div class="text-center space-y-1">
           <h2 class="text-xl sm:text-2xl font-black uppercase tracking-tight text-white underline underline-offset-4">
-            ACCOUNTING UNDERGRADUATE DEGREE
+            {reqs.degreeTitle}
           </h2>
           <h3 class="text-lg sm:text-xl font-bold uppercase tracking-tight text-neutral-100 underline underline-offset-4">
-            BS - BACHELOR OF SCIENCE
+            {reqs.degreeType}
           </h3>
           <p class="text-sm font-medium text-neutral-300 pt-1">
-            Current Curriculum (60-73)
+            {reqs.curriculum}
           </p>
         </div>
 
@@ -83,39 +61,52 @@ const otherProfessional = [
             </h4>
           </div>
 
+          <!-- Earn at least 3 credits -->
           <div class="space-y-2">
             <p class="font-semibold text-white">Earn at least 3 credits from the following:</p>
             <ul class="list-disc list-inside pl-2 space-y-1 text-neutral-300">
-              <li>
-                <strong>MATH 15000</strong> - Calculus I (4 cr)
-                <span class="block pl-6 text-xs text-[#FFC72A] font-semibold">AND MATH 15200 - Calculus for the Life and Social Science (4 cr)</span>
-              </li>
+              {reqs.mathSequence.atLeast3Credits.map((item) => (
+                <li>
+                  <strong>{item.course}</strong>
+                  {item.subOption && (
+                    <span class="block pl-6 text-xs text-[#FFC72A] font-semibold">
+                      {item.subOption}
+                    </span>
+                  )}
+                </li>
+              ))}
             </ul>
           </div>
 
+          <!-- Earn at least 9 credits -->
           <div class="space-y-2">
             <p class="font-semibold text-white">Earn at least 9 credits from the following:</p>
             <ul class="list-disc list-inside pl-2 space-y-2 text-neutral-300">
-              <li>
-                <strong>MATH 10100</strong> - Algebra for College Students (3 cr)
-                <span class="block pl-6 text-xs text-neutral-400"><strong>OR</strong> MATH 101EN - Algebra College Stud-Enhanced (3 cr)</span>
-              </li>
-              <li><strong>MATH 10500</strong> - Math for Elementary Education 2 (3 cr)</li>
-              <li>
-                <strong>MATH 12400</strong> - College Algebra and Trigonometry (4 cr)
-                <span class="block pl-6 text-xs text-neutral-400"><strong>OR</strong> MATH 12500 - Precalculus (4 cr)</span>
-                <span class="block pl-6 text-xs text-neutral-400"><strong>OR</strong> MATH 12550 - Precalculus with Workshop (4 cr)</span>
-              </li>
-              <li><strong>MATH 14000</strong> - Mathematical Reasoning Workshop (1 cr)</li>
+              {reqs.mathSequence.atLeast9Credits.map((item) => (
+                <li>
+                  <strong>{item.primary}</strong>
+                  {item.alternate && (
+                    <span class="block pl-6 text-xs text-neutral-400">
+                      <strong>OR</strong> {item.alternate}
+                    </span>
+                  )}
+                  {item.alternates && item.alternates.map((alt) => (
+                    <span class="block pl-6 text-xs text-neutral-400">
+                      <strong>OR</strong> {alt}
+                    </span>
+                  ))}
+                </li>
+              ))}
             </ul>
           </div>
 
+          <!-- Math Placement Notes -->
           <div class="p-4 rounded-xl bg-[#0e0716]/60 border border-[#5F259F]/30 text-xs text-neutral-300 leading-relaxed space-y-1.5">
             <p>
-              <strong>Notes:</strong> Students may place out of any of the classes listed above and MATH 15000 (STEM)/MATH 15200 (STEM) without replacing the credits.
+              <strong>Notes:</strong> {reqs.mathSequence.placementNote}
             </p>
             <p class="text-[#FFC72A]">
-              MATH 15000 (STEM) is preferred for students who will take additional MATH courses.
+              {reqs.mathSequence.preferredNote}
             </p>
           </div>
         </div>
@@ -129,7 +120,7 @@ const otherProfessional = [
           </div>
 
           <ul class="list-disc list-inside pl-2 space-y-1 text-neutral-300">
-            {professionalStudies.map((course) => (
+            {reqs.professionalStudies.map((course) => (
               <li>
                 <strong>{course.code}</strong> - {course.title} ({course.credits})
               </li>
@@ -139,10 +130,10 @@ const otherProfessional = [
           <!-- Exception Policy Notice -->
           <div class="p-4 rounded-xl bg-red-950/20 border border-red-500/30 text-xs text-neutral-300 leading-relaxed mt-4 space-y-2">
             <p>
-              Students who receive a grade of <strong>“D” or lower</strong> in any of the nine required Accounting courses in the Professional Studies Requirement will be allowed to repeat the course <strong>only once</strong>. In total, students may repeat no more than three Accounting courses for which they received a grade of “D” or lower. Students who exceed this allowed number of course repeats will be dismissed from the B.S. program in Accounting.
+              {reqs.repeatPolicy.rule}
             </p>
             <p class="font-medium text-neutral-200">
-              The Academic Advisor for the B.S. program in Accounting may, under extraordinary circumstances, make exceptions to this rule.
+              {reqs.repeatPolicy.exception}
             </p>
           </div>
         </div>
@@ -156,7 +147,7 @@ const otherProfessional = [
           </div>
 
           <ul class="list-disc list-inside pl-2 space-y-1 text-neutral-300">
-            {otherProfessional.map((course) => (
+            {reqs.otherProfessional.map((course) => (
               <li>
                 <strong>{course.code}</strong> - {course.title} ({course.credits})
               </li>
@@ -173,7 +164,7 @@ const otherProfessional = [
         </p>
         <div>
           <a 
-            href="https://hunter-undergraduate.catalog.cuny.edu/programs/ACCP-BS" 
+            href={reqs.catalogUrl} 
             target="_blank" 
             rel="noopener noreferrer"
             class="inline-block px-8 py-2.5 rounded-lg bg-[#5F259F] hover:bg-[#752dc4] text-white text-xs font-bold uppercase tracking-wider transition shadow-lg shadow-[#5F259F]/20"
@@ -189,12 +180,12 @@ const otherProfessional = [
         <div class="w-full h-1 bg-[#FFC72A] rounded-full mb-6"></div>
 
         <p class="text-center text-xs sm:text-sm text-neutral-200">
-          For any questions regarding degree requirements please contact our accounting advisor Joseph Downey: 
+          For any questions regarding degree requirements please contact our accounting advisor {reqs.advisor.name}: 
           <a 
-            href="mailto:accugrad@hunter.cuny.edu" 
+            href={`mailto:${reqs.advisor.email}`} 
             class="text-[#FFC72A] font-semibold underline hover:text-[#ffe07b] transition ml-1"
           >
-            accugrad@hunter.cuny.edu
+            {reqs.advisor.email}
           </a>.
         </p>
       </section>
