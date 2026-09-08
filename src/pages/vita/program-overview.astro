@@ -1,39 +1,7 @@
 ---
 // src/pages/vita/program-overview.astro
 import '../../styles/global.css';
-
-const irsResources = [
-  {
-    title: "Link & Learn Taxes Certification Portal",
-    code: "VITA / TCE LMS",
-    desc: "The official testing portal where volunteers create an account and complete all required certification exams.",
-    url: "https://lms.linklearncertification.com/lms/signin"
-  },
-  {
-    title: "VITA/TCE Volunteer Resource Guide",
-    code: "IRS Publication 4012",
-    desc: "The primary reference manual used by volunteers during tax preparation to check filing thresholds, dependents, and deductions.",
-    url: "https://www.irs.gov/pub/irs-pdf/p4012.pdf"
-  },
-  {
-    title: "VITA/TCE Training Guide",
-    code: "IRS Publication 4491",
-    desc: "Comprehensive training manual covering basic, advanced, and specialty tax law concepts.",
-    url: "https://www.irs.gov/pub/irs-pdf/p4491.pdf"
-  },
-  {
-    title: "Volunteer Standards of Conduct Training",
-    code: "IRS Publication 4961",
-    desc: "Mandatory ethics course and guidelines for taxpayer confidentiality and conflict of interest.",
-    url: "https://www.irs.gov/pub/irs-pdf/p4961.pdf"
-  },
-  {
-    title: "Intake/Interview & Quality Review Training",
-    code: "IRS Publication 5101",
-    desc: "Procedures for taxpayer intake, verifying government IDs, and conducting second-party reviews.",
-    url: "https://www.irs.gov/pub/irs-pdf/p5101.pdf"
-  }
-];
+import vitaData from '../../data/vita-overview.json';
 ---
 
 <html lang="en" class="scroll-smooth">
@@ -64,7 +32,7 @@ const irsResources = [
         </h1>
         <div class="flex flex-col items-center gap-2.5 pt-2">
           <span class="inline-block px-5 py-2 rounded-lg bg-[#5F259F] text-white text-xs sm:text-sm font-bold shadow-lg shadow-[#5F259F]/30">
-            Applications to become a volunteer open up at the end of the fall semester
+            {vitaData.volunteerAnnouncement}
           </span>
         </div>
         <!-- Gold Divider Bar -->
@@ -92,14 +60,14 @@ const irsResources = [
         </div>
 
         <p class="text-neutral-300 text-sm leading-relaxed">
-          Please email <a href="mailto:huntercollegevita@gmail.com" class="text-[#FFC72A] font-semibold hover:underline">huntercollegevita@gmail.com</a>
+          Please email <a href={`mailto:${vitaData.contactEmail}`} class="text-[#FFC72A] font-semibold hover:underline">{vitaData.contactEmail}</a>
         </p>
 
         <div class="space-y-2 pt-2">
           <ul class="space-y-2 text-sm text-neutral-300">
             <li class="flex items-start gap-2.5">
               <span class="text-[#FFC72A] font-bold">•</span>
-              <span><strong class="text-white">Subject line:</strong> "VITA Interest 2026"</span>
+              <span><strong class="text-white">Subject line:</strong> "{vitaData.interestSubjectLine}"</span>
             </li>
             <li class="flex items-start gap-2.5">
               <span class="text-[#FFC72A] font-bold">•</span>
@@ -118,7 +86,7 @@ const irsResources = [
         <div>
           <h2 class="text-2xl font-bold text-white tracking-tight">Requirements to become a volunteer</h2>
           <p class="text-sm text-neutral-300 mt-2">
-            Pass exams on <a href="https://lms.linklearncertification.com/lms/signin" target="_blank" rel="noopener noreferrer" class="text-[#FFC72A] font-semibold hover:underline">https://lms.linklearncertification.com/lms/signin</a>
+            Pass exams on <a href={vitaData.certificationPortalUrl} target="_blank" rel="noopener noreferrer" class="text-[#FFC72A] font-semibold hover:underline">{vitaData.certificationPortalUrl}</a>
           </p>
         </div>
 
@@ -127,29 +95,26 @@ const irsResources = [
           <h3 class="text-base font-bold text-[#FFC72A] uppercase tracking-wider">For all Volunteers:</h3>
           
           <ul class="list-disc list-inside text-sm text-neutral-300 space-y-2">
-            <li>Standard of Conduct</li>
-            <li>Intake/Quality Review</li>
-            <li>Basic Exam Certification (for Basic Preparers)</li>
-            <li>Advanced Exam Certification (for Advanced Preparers, Officers, and Site Coordinators)</li>
-            <li>Coordinator Exam Certification (for Site Coordinators)</li>
+            {vitaData.requiredExams.map((exam) => (
+              <li>{exam}</li>
+            ))}
           </ul>
 
           <!-- Minimum Score Callout -->
           <div class="p-4 rounded-xl bg-amber-500/10 border border-[#FFC72A]/40 text-center mt-6">
             <p class="text-sm text-neutral-200">
-              <strong class="text-[#FFC72A] font-bold">MUST</strong> score a minimum of <strong class="text-[#FFC72A] font-bold">80%</strong> for all exams.
+              <strong class="text-[#FFC72A] font-bold">MUST</strong> score a minimum of <strong class="text-[#FFC72A] font-bold">{vitaData.passingScore}</strong> for all exams.
             </p>
           </div>
         </div>
 
         <!-- Timeline & Training Notes -->
         <div class="space-y-4 text-center py-4">
-          <p class="text-sm text-neutral-200 leading-relaxed">
-            Mandatory lecture and software training sessions will be held in January if you have passed the exams.
-          </p>
-          <p class="text-sm text-neutral-300 leading-relaxed">
-            There will be an interest meeting for VITA held at the end of the fall semester.
-          </p>
+          {vitaData.timelineNotes.map((note) => (
+            <p class="text-sm text-neutral-200 leading-relaxed">
+              {note}
+            </p>
+          ))}
         </div>
       </section>
 
@@ -161,7 +126,7 @@ const irsResources = [
         </div>
         
         <div class="grid sm:grid-cols-2 gap-4">
-          {irsResources.map((res) => (
+          {vitaData.irsResources.map((res) => (
             <a 
               href={res.url} 
               target="_blank" 
@@ -188,7 +153,7 @@ const irsResources = [
       <!-- Questions Banner -->
       <section class="p-6 rounded-2xl bg-[#190e2b]/60 border border-[#5F259F]/30 text-center space-y-2">
         <p class="text-sm text-neutral-300">
-          If you have any further questions please email <a href="mailto:huntercollegevita@gmail.com" class="text-[#FFC72A] font-bold hover:underline">huntercollegevita@gmail.com</a>
+          If you have any further questions please email <a href={`mailto:${vitaData.contactEmail}`} class="text-[#FFC72A] font-bold hover:underline">{vitaData.contactEmail}</a>
         </p>
       </section>
 
