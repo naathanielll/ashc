@@ -1,0 +1,16 @@
+{
+  "heroHeading": "Ready to Take the Next Step and Get Your Master’s?",
+  "heroDescription": "Whether you’re pursuing your 150-credit requirement for the CPA or simply looking to earn a master’s degree, explore the links below for detailed information about available programs and opportunities!",
+  "programDetails": [
+    "Tuition Costs",
+    "Application deadline",
+    "Course Work and Structure",
+    "Career Paths & more"
+  ],
+  "overviewUrl": "https://www.hunter.cuny.edu/students/admissions/graduate-admissions/school-of-arts-and-sciences/social-sciences/ms-in-accounting/",
+  "applyUrl": "https://www.hunter.cuny.edu/students/admissions/graduate-admissions/apply/graduate-degree/",
+  "advisor": {
+    "name": "Professor Yuan (Judy) Yin",
+    "email": "yuan.yin@hunter.cuny.edu"
+  }
+}
