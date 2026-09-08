@@ -22,11 +22,7 @@ const otherProfessional = [
   { code: "ECO 36500", title: "Corporate Finance", credits: "3 cr" },
   { code: "ACCP 36700", title: "Analysis of Financial Statements", credits: "3 cr" },
   { code: "ACCP 47600", title: "Computer Accounting Systems", credits: "3 cr" },
-  { 
-    code: "ECO 22100 or STAT 21300", 
-    title: "Economic Statistics OR Intro to Applied Statistics", 
-    credits: "3 cr" 
-  }
+  { code: "ECO 22100 or STAT 21300", title: "Economic Statistics OR Intro to Applied Statistics", credits: "3 cr" }
 ];
 ---
 
@@ -39,7 +35,7 @@ const otherProfessional = [
   </head>
   <body class="bg-[#0e0716] text-neutral-100 min-h-screen font-sans antialiased selection:bg-[#FFC72A] selection:text-neutral-950">
 
-    <!-- Top Sticky Header with Clear "Major Requirements" Label -->
+    <!-- Top Navigation Header -->
     <header class="border-b border-[#5F259F]/30 bg-[#0e0716]/95 sticky top-0 z-50 backdrop-blur-md px-6 py-4">
       <div class="max-w-5xl mx-auto flex items-center justify-between">
         <a href="/" class="text-sm font-bold text-white hover:text-[#FFC72A] transition flex items-center gap-2">
@@ -54,167 +50,159 @@ const otherProfessional = [
       </div>
     </header>
 
-    <main class="max-w-4xl mx-auto px-6 py-16 space-y-16">
+    <main class="max-w-4xl mx-auto px-6 py-12 space-y-12">
       
-      <!-- Page Hero Header -->
-      <section class="space-y-4">
-        <span class="inline-block px-3 py-1 text-xs font-semibold uppercase tracking-wider text-[#FFC72A] bg-[#5F259F]/30 border border-[#FFC72A]/40 rounded-full">
-          BS – Bachelor of Science • Current Curriculum (60–73 Credits)
-        </span>
-        <h1 class="text-4xl sm:text-5xl font-extrabold text-white tracking-tight leading-tight">
-          Accounting Undergraduate Major Requirements
+      <!-- Top Section Header -->
+      <div class="text-center space-y-2">
+        <h1 class="text-3xl sm:text-4xl font-extrabold text-[#c084fc] tracking-tight">
+          Major Requirements
         </h1>
-        <p class="text-lg text-neutral-300 max-w-2xl leading-relaxed">
-          Official course sequence and degree requirements for students pursuing the Bachelor of Science in Accounting at Hunter College.
-        </p>
-      </section>
+      </div>
 
-      <!-- Section: Math Sequence -->
-      <section class="p-8 rounded-3xl bg-[#190e2b]/60 border border-[#5F259F]/40 shadow-xl space-y-6">
-        <div class="flex items-center justify-between border-b border-[#5F259F]/30 pb-3">
-          <h2 class="text-2xl font-bold text-white tracking-tight">Math Sequence</h2>
-          <span class="text-xs text-[#FFC72A] font-semibold uppercase tracking-wider">Foundation</span>
-        </div>
-
-        <!-- 3 Credit Requirement -->
-        <div class="space-y-3">
-          <h3 class="text-sm font-bold uppercase tracking-wider text-[#FFC72A]">
-            Earn at least 3 credits from the following:
-          </h3>
-          <div class="p-4 rounded-xl bg-[#0e0716]/70 border border-[#5F259F]/30 space-y-1 text-sm text-neutral-200">
-            <p>• <strong>MATH 15000</strong> - Calculus I (4 cr)</p>
-            <p class="text-xs text-neutral-400 pl-3">AND / OR</p>
-            <p>• <strong>MATH 15200</strong> - Calculus for the Life and Social Sciences (4 cr)</p>
-          </div>
-        </div>
-
-        <!-- 9 Credit Requirement -->
-        <div class="space-y-3">
-          <h3 class="text-sm font-bold uppercase tracking-wider text-[#FFC72A]">
-            Earn at least 9 credits from the following:
-          </h3>
-          <div class="grid sm:grid-cols-2 gap-3">
-            <div class="p-3.5 rounded-xl bg-[#0e0716]/70 border border-[#5F259F]/30 text-xs text-neutral-300">
-              <strong class="text-white block text-sm mb-1">Algebra</strong>
-              MATH 10100 - Algebra for College Students (3 cr)<br/>
-              <span class="text-neutral-400">OR</span> MATH 101EN - Enhanced (3 cr)
-            </div>
-            <div class="p-3.5 rounded-xl bg-[#0e0716]/70 border border-[#5F259F]/30 text-xs text-neutral-300">
-              <strong class="text-white block text-sm mb-1">Elementary Math</strong>
-              MATH 10500 - Math for Elementary Education 2 (3 cr)
-            </div>
-            <div class="p-3.5 rounded-xl bg-[#0e0716]/70 border border-[#5F259F]/30 text-xs text-neutral-300">
-              <strong class="text-white block text-sm mb-1">Precalculus</strong>
-              MATH 12400 - College Algebra & Trig (4 cr)<br/>
-              <span class="text-neutral-400">OR</span> MATH 12500 - Precalculus (4 cr)<br/>
-              <span class="text-neutral-400">OR</span> MATH 12550 - Precalculus with Workshop (4 cr)
-            </div>
-            <div class="p-3.5 rounded-xl bg-[#0e0716]/70 border border-[#5F259F]/30 text-xs text-neutral-300">
-              <strong class="text-white block text-sm mb-1">Workshop</strong>
-              MATH 14000 - Mathematical Reasoning Workshop (1 cr)
-            </div>
-          </div>
-        </div>
-
-        <!-- Placement Note -->
-        <div class="p-4 rounded-xl bg-[#5F259F]/20 border border-[#5F259F]/40 text-xs text-neutral-300 leading-relaxed space-y-1">
-          <p>
-            <strong>Notes:</strong> Students may place out of any of the classes listed above and MATH 15000 (STEM) / MATH 15200 (STEM) without replacing the credits.
-          </p>
-          <p class="text-[#FFC72A]">
-            * MATH 15000 (STEM) is preferred for students who will take additional MATH courses.
-          </p>
-        </div>
-      </section>
-
-      <!-- Section: Professional Studies (30 Credits Required) -->
-      <section class="space-y-6">
-        <div class="flex items-center justify-between border-b border-[#5F259F]/30 pb-3">
-          <div>
-            <h2 class="text-2xl font-bold text-white tracking-tight">Professional Studies</h2>
-            <p class="text-xs text-neutral-400 mt-1">Core Accounting Sequence</p>
-          </div>
-          <span class="px-3 py-1 rounded-full text-xs font-bold bg-[#FFC72A] text-neutral-950">
-            30 Credits (Required)
-          </span>
-        </div>
-
-        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-3.5">
-          {professionalStudies.map((course) => (
-            <div class="p-4 rounded-2xl bg-[#190e2b]/50 border border-[#5F259F]/30 hover:border-[#FFC72A]/40 transition flex flex-col justify-between">
-              <div>
-                <span class="text-xs font-bold text-[#FFC72A] tracking-wide uppercase">{course.code}</span>
-                <h3 class="text-sm font-semibold text-white mt-1 leading-snug">{course.title}</h3>
-              </div>
-              <span class="text-[11px] font-medium text-neutral-400 mt-3">{course.credits}</span>
-            </div>
-          ))}
-        </div>
-
-        <!-- Academic Policy Callout -->
-        <div class="p-6 rounded-2xl bg-red-950/20 border border-red-500/30 text-xs text-neutral-300 leading-relaxed space-y-2">
-          <div class="flex items-center gap-2 text-red-400 font-bold uppercase tracking-wider text-[11px]">
-            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
-            </svg>
-            <span>Course Repeat & Dismissal Policy</span>
-          </div>
-          <p>
-            Students who receive a grade of <strong>“D” or lower</strong> in any of the nine required Accounting courses in the Professional Studies Requirement will be allowed to repeat the course <strong>only once</strong>.
-          </p>
-          <p>
-            In total, students may repeat <strong>no more than three</strong> Accounting courses for which they received a grade of “D” or lower. Students who exceed this allowed number of course repeats will be dismissed from the B.S. program in Accounting. The Academic Advisor for the B.S. program in Accounting may, under extraordinary circumstances, make exceptions to this rule.
-          </p>
-        </div>
-      </section>
-
-      <!-- Section: Other Professional Requirements (30 Credits) -->
-      <section class="space-y-6">
-        <div class="flex items-center justify-between border-b border-[#5F259F]/30 pb-3">
-          <div>
-            <h2 class="text-2xl font-bold text-white tracking-tight">Other Professional Requirements</h2>
-            <p class="text-xs text-neutral-400 mt-1">Economics, Law, Statistics & Systems</p>
-          </div>
-          <span class="px-3 py-1 rounded-full text-xs font-bold bg-[#FFC72A] text-neutral-950">
-            30 Credits
-          </span>
-        </div>
-
-        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-3.5">
-          {otherProfessional.map((course) => (
-            <div class="p-4 rounded-2xl bg-[#190e2b]/50 border border-[#5F259F]/30 hover:border-[#FFC72A]/40 transition flex flex-col justify-between">
-              <div>
-                <span class="text-xs font-bold text-[#FFC72A] tracking-wide uppercase">{course.code}</span>
-                <h3 class="text-sm font-semibold text-white mt-1 leading-snug">{course.title}</h3>
-              </div>
-              <span class="text-[11px] font-medium text-neutral-400 mt-3">{course.credits}</span>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      <!-- Bottom Advisor Contact Notice -->
-      <section class="pt-6">
-        <!-- Gold Accent Line -->
-        <div class="w-full h-1 bg-gradient-to-r from-[#FFC72A] via-[#FFD700] to-[#FFC72A] rounded-full mb-6"></div>
+      <!-- Main Degree Card -->
+      <section class="p-8 sm:p-10 rounded-3xl bg-[#190e2b]/80 border border-[#5F259F]/50 shadow-2xl space-y-10">
         
-        <div class="p-6 rounded-2xl bg-[#190e2b]/70 border border-[#5F259F]/40 text-center">
-          <p class="text-sm sm:text-base text-neutral-200">
-            For any questions regarding degree requirements please contact our accounting advisor Joseph Downey: 
-            <a 
-              href="mailto:accugrad@hunter.cuny.edu" 
-              class="text-[#FFC72A] font-bold underline hover:text-[#ffe07b] transition ml-1 inline-block"
-            >
-              accugrad@hunter.cuny.edu
-            </a>
+        <!-- Degree Header Titles -->
+        <div class="text-center space-y-1">
+          <h2 class="text-xl sm:text-2xl font-black uppercase tracking-tight text-white underline underline-offset-4">
+            ACCOUNTING UNDERGRADUATE DEGREE
+          </h2>
+          <h3 class="text-lg sm:text-xl font-bold uppercase tracking-tight text-neutral-100 underline underline-offset-4">
+            BS - BACHELOR OF SCIENCE
+          </h3>
+          <p class="text-sm font-medium text-neutral-300 pt-1">
+            Current Curriculum (60-73)
           </p>
         </div>
+
+        <!-- Math Sequence -->
+        <div class="space-y-6 text-sm text-neutral-200">
+          <div class="border-b border-[#5F259F]/40 pb-2">
+            <h4 class="text-base font-bold text-white underline underline-offset-2">
+              Math Sequence
+            </h4>
+          </div>
+
+          <div class="space-y-2">
+            <p class="font-semibold text-white">Earn at least 3 credits from the following:</p>
+            <ul class="list-disc list-inside pl-2 space-y-1 text-neutral-300">
+              <li>
+                <strong>MATH 15000</strong> - Calculus I (4 cr)
+                <span class="block pl-6 text-xs text-[#FFC72A] font-semibold">AND MATH 15200 - Calculus for the Life and Social Science (4 cr)</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="space-y-2">
+            <p class="font-semibold text-white">Earn at least 9 credits from the following:</p>
+            <ul class="list-disc list-inside pl-2 space-y-2 text-neutral-300">
+              <li>
+                <strong>MATH 10100</strong> - Algebra for College Students (3 cr)
+                <span class="block pl-6 text-xs text-neutral-400"><strong>OR</strong> MATH 101EN - Algebra College Stud-Enhanced (3 cr)</span>
+              </li>
+              <li><strong>MATH 10500</strong> - Math for Elementary Education 2 (3 cr)</li>
+              <li>
+                <strong>MATH 12400</strong> - College Algebra and Trigonometry (4 cr)
+                <span class="block pl-6 text-xs text-neutral-400"><strong>OR</strong> MATH 12500 - Precalculus (4 cr)</span>
+                <span class="block pl-6 text-xs text-neutral-400"><strong>OR</strong> MATH 12550 - Precalculus with Workshop (4 cr)</span>
+              </li>
+              <li><strong>MATH 14000</strong> - Mathematical Reasoning Workshop (1 cr)</li>
+            </ul>
+          </div>
+
+          <div class="p-4 rounded-xl bg-[#0e0716]/60 border border-[#5F259F]/30 text-xs text-neutral-300 leading-relaxed space-y-1.5">
+            <p>
+              <strong>Notes:</strong> Students may place out of any of the classes listed above and MATH 15000 (STEM)/MATH 15200 (STEM) without replacing the credits.
+            </p>
+            <p class="text-[#FFC72A]">
+              MATH 15000 (STEM) is preferred for students who will take additional MATH courses.
+            </p>
+          </div>
+        </div>
+
+        <!-- Professional Studies (Required) 30 Credits -->
+        <div class="space-y-4 text-sm text-neutral-200">
+          <div class="border-b border-[#5F259F]/40 pb-2">
+            <h4 class="text-base font-bold text-white">
+              <span class="underline underline-offset-2">Professional Studies</span> <span class="text-red-400 font-bold">(required)</span> 30 credits
+            </h4>
+          </div>
+
+          <ul class="list-disc list-inside pl-2 space-y-1 text-neutral-300">
+            {professionalStudies.map((course) => (
+              <li>
+                <strong>{course.code}</strong> - {course.title} ({course.credits})
+              </li>
+            ))}
+          </ul>
+
+          <!-- Exception Policy Notice -->
+          <div class="p-4 rounded-xl bg-red-950/20 border border-red-500/30 text-xs text-neutral-300 leading-relaxed mt-4 space-y-2">
+            <p>
+              Students who receive a grade of <strong>“D” or lower</strong> in any of the nine required Accounting courses in the Professional Studies Requirement will be allowed to repeat the course <strong>only once</strong>. In total, students may repeat no more than three Accounting courses for which they received a grade of “D” or lower. Students who exceed this allowed number of course repeats will be dismissed from the B.S. program in Accounting.
+            </p>
+            <p class="font-medium text-neutral-200">
+              The Academic Advisor for the B.S. program in Accounting may, under extraordinary circumstances, make exceptions to this rule.
+            </p>
+          </div>
+        </div>
+
+        <!-- Other Professional Requirements 30 Credits -->
+        <div class="space-y-4 text-sm text-neutral-200">
+          <div class="border-b border-[#5F259F]/40 pb-2">
+            <h4 class="text-base font-bold text-white underline underline-offset-2">
+              Other Professional Requirements 30 credits
+            </h4>
+          </div>
+
+          <ul class="list-disc list-inside pl-2 space-y-1 text-neutral-300">
+            {otherProfessional.map((course) => (
+              <li>
+                <strong>{course.code}</strong> - {course.title} ({course.credits})
+              </li>
+            ))}
+          </ul>
+        </div>
+
+      </section>
+
+      <!-- External Information Link Section -->
+      <section class="text-center space-y-4 py-4">
+        <p class="text-sm font-semibold text-neutral-200">
+          Please click on the following link if you would like more information on the requirements.
+        </p>
+        <div>
+          <a 
+            href="https://hunter-undergraduate.catalog.cuny.edu/programs/ACCP-BS" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            class="inline-block px-8 py-2.5 rounded-lg bg-[#5F259F] hover:bg-[#752dc4] text-white text-xs font-bold uppercase tracking-wider transition shadow-lg shadow-[#5F259F]/20"
+          >
+            information
+          </a>
+        </div>
+      </section>
+
+      <!-- Advisor Contact Footer Section -->
+      <section class="pt-4">
+        <!-- Gold Divider Bar -->
+        <div class="w-full h-1 bg-[#FFC72A] rounded-full mb-6"></div>
+
+        <p class="text-center text-xs sm:text-sm text-neutral-200">
+          For any questions regarding degree requirements please contact our accounting advisor Joseph Downey: 
+          <a 
+            href="mailto:accugrad@hunter.cuny.edu" 
+            class="text-[#FFC72A] font-semibold underline hover:text-[#ffe07b] transition ml-1"
+          >
+            accugrad@hunter.cuny.edu
+          </a>.
+        </p>
       </section>
 
     </main>
 
     <!-- Footer -->
-    <footer class="border-t border-[#5F259F]/20 py-8 px-6 text-center text-xs text-neutral-400">
+    <footer class="border-t border-[#5F259F]/20 py-8 px-6 text-center text-xs text-neutral-400 mt-12">
       <p>© {new Date().getFullYear()} Hunter College Accounting Society • Academic Resources</p>
     </footer>
 
