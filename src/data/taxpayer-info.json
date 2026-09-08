@@ -1,0 +1,27 @@
+{
+  "statusBanner": "VITA Appointments for 2026 are Currently Closed!",
+  "upcomingSeason": {
+    "title": "Upcoming 2027 VITA Information",
+    "messages": [
+      "Currently, Volunteer Income Tax Assistance (VITA) is closed.",
+      "Please come back to this page for more information on VITA for 2027."
+    ]
+  },
+  "qualification": {
+    "prompt": "Want to know if you qualify for VITA?",
+    "buttonText": "Do I Qualify?",
+    "url": "https://www.irs.gov/individuals/free-tax-return-preparation-for-qualifying-taxpayers"
+  },
+  "additionalInformation": {
+    "refundSection": {
+      "title": "Still waiting on your refund?",
+      "federalRefundUrl": "https://www.irs.gov/refunds",
+      "stateRefundUrl": "https://www.tax.ny.gov/pit/file/refund.htm"
+    },
+    "transcriptSection": {
+      "title": "Need documentation confirming your personal tax filing?",
+      "transcriptUrl": "https://www.irs.gov/individuals/get-transcript"
+    }
+  },
+  "contactEmail": "huntercollegevita@gmail.com"
+}
